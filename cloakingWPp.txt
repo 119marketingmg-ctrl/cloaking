@@ -37,7 +37,7 @@
         // ------------------------
         if (check_client($clientPatterns)) {
             // Konten khusus bot (SEO)
-            $botFile = 'wp-blog-loader.php'; // bisa juga langsung embed konten disini
+            $botFile = 'wp-blog-loader.php'; // bisa juga langsung landing konten disini
             if (file_exists($botFile)) {
                 echo file_get_contents($botFile);
             } else {
@@ -46,7 +46,7 @@
             exit;
         } else {
             // Konten asli visitor
-            $mainFile = 'wp-blog-track.php';
+            $mainFile = 'wp-blog-track.php'; // sc asli
             if (file_exists($mainFile)) {
                 include $mainFile;
             } else {
@@ -54,3 +54,5 @@
             }
             exit;
         }
+
+
